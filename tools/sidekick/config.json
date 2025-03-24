@@ -2,6 +2,13 @@
   "project": "Boilerplate",
   "plugins": [
     {
+      "id": "custom library",
+      "title": "Custom Library",
+      "environments": ["edit"],
+      "url": "/tools/sidekick/library.html",
+      "includePaths": ["**.docx**"]
+    },
+    {
       "id": "cif",
       "title": "Commerce",
       "environments": [
