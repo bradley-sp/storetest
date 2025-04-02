@@ -1,6 +1,14 @@
 /* stylelint-disable max-line-length */
 
 @font-face {
+    font-family: kanit;
+    src: url('../fonts/Kanit/Kanit-Regular.woff2') format('woff2');
+    font-style: normal;
+    font-weight: 500;
+}
+
+
+@font-face {
     font-family: adobe-clean;
     src: url('../fonts/adobe-clean-normal-400.woff2') format('woff2');
     font-display: swap;

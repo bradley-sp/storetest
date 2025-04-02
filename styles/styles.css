@@ -15,6 +15,11 @@
 /* stylelint-disable no-empty-source */
 :root, .dropin-design {
   /* Adobe Commerce Dropin design tokens */
+    --color-brand-test-1: #1a5391;
+    --color-brand-test-2: #00ccff;
+    --color-brand-test-3: #ed6b1b;
+    --color-brand-test-4: #e8e8e8;
+    --color-brand-test-5: #af8abc;
   --color-brand-300: #6d6d6d;
   --color-brand-500: #454545;
   --color-brand-600: #383838;
@@ -77,6 +82,7 @@
   --shape-icon-stroke-2: 1.5px;
   --shape-icon-stroke-3: 2px;
   --shape-icon-stroke-4: 4px;
+    --spacing-xxxsmall: 1px;
   --spacing-xxsmall: 4px;
   --spacing-xsmall: 8px;
   --spacing-small: 16px;
@@ -90,13 +96,17 @@
   --spacing-huge: 120px;
   --spacing-xhuge: 144px;
   --spacing-xxhuge: 192px;
+    --type-decor-font-family: kanit, sans-serif;
   --type-base-font-family: adobe-clean, roboto, roboto-fallback, system-ui, sans-serif;
+    --type-decor-1-font: normal normal 600 6rem/7.2rem var(--type-decor-font-family);
   --type-display-1-font: normal normal 300 6rem/7.2rem var(--type-base-font-family);
   --type-display-1-letter-spacing: 0.04em;
   --type-display-2-font: normal normal 300 4.8rem/5.6rem var(--type-base-font-family);
   --type-display-2-letter-spacing: 0.04em;
   --type-display-3-font: normal normal 300 3.4rem/4rem var(--type-base-font-family);
   --type-display-3-letter-spacing: 0.04em;
+    --type-display-4-font: normal normal 600 4rem var(--type-base-font-family);
+    --type-display-4-letter-spacing: 0.04em;
   --type-headline-1-font: normal normal 400 2.4rem/3.2rem var(--type-base-font-family);
   --type-headline-1-letter-spacing: 0.04em;
   --type-headline-2-default-font: normal normal 300 2rem/2.4rem var(--type-base-font-family);
@@ -199,12 +209,12 @@ h6 {
 }
 
 h1 {
-  font: var(--type-display-1-font);
+  font: var(--type-decor-1-font);
   letter-spacing: var(--type-display-1-letter-spacing);
 }
 
 h2 {
-  font: var(--type-display-2-font);
+  font: var(--type-decor-1-font);
   letter-spacing: var(--type-display-2-letter-spacing);
 }
 
@@ -290,14 +300,16 @@ a:not(.dropin-design a):hover {
 }
 
 /* buttons */
+
 main a.button:any-link,
-button.button {
+button.button, button {
   box-sizing: border-box;
   display: inline-block;
   max-width: 100%;
+    width: 100%;
   margin: var(--spacing-small) 0;
-  border: var(--shape-border-width-3) solid transparent;
-  border-radius: var(--shape-border-radius-3);
+  border: var(--shape-border-width-4) solid transparent;
+  border-radius: var(--shape-border-radius-1);
   padding: 0.5em 1.2em;
   font: var(--type-button-2-font);
   letter-spacing: var(--type-button-2-letter-spacing);
@@ -306,7 +318,7 @@ button.button {
   line-height: 1.25;
   text-align: center;
   text-decoration: none;
-  background-color: var(--color-brand-500);
+  background-color: var(--color-brand-test-2);
   color: var(--color-neutral-50);
   cursor: pointer;
   overflow: hidden;
@@ -317,14 +329,19 @@ button.button {
 main a.button:hover,
 main a.button:focus,
 button.button:hover,
-button.button:focus {
+button.button:focus,
+button:hover,
+button:focus {
   background-color: var(--color-brand-600);
   cursor: pointer;
 }
 
 main a.button.disabled,
 button.button:disabled,
-button.button:disabled:hover {
+button.button:disabled:hover,
+button.disabled,
+button:disabled,
+button:disabled:hover {
   background-color: var(--color-neutral-300);
   cursor: unset;
 }
