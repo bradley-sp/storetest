@@ -380,5 +380,3 @@ events.on('cart/updated', () => {
 events.on('cart/reset', () => {
   applyHashTagsForDomElement('nav');
 }, { eager: true });
-
-

@@ -151,5 +151,4 @@ export default async function decorate(block) {
   // Replace <p> with <button> for Shop Now, while client can change text in button
   const slideContent = document.querySelector('.carousel-slide-content p u');
   slideContent.outerHTML = `<button class="carousel">${slideContent.textContent}</button>`;
-
 }

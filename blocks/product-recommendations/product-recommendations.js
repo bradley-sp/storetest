@@ -136,7 +136,7 @@ function renderItems(block, results) {
 
   // Replace <h2> Attribute title with meta title
   const relatedEl = document.querySelector('.section.product-recommendations-container');
-  let relatedDataAtt = relatedEl.getAttribute("data-title");
+  const relatedDataAtt = relatedEl.getAttribute('data-title');
   const relatedH2 = document.querySelector('.product-recommendations h2');
   relatedH2.outerHTML = `<h2 class="related-title">${relatedDataAtt}</h2>`;
 

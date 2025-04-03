@@ -18,8 +18,8 @@ export default function decorate(block) {
     const cardsBodyFirstP = cardsBodyFirst.children[0];
     cardsBodyFirstP.outerHTML = `<button>${cardsBodyFirstP.textContent}</button>`;
 
-  ul.querySelectorAll('picture > img').forEach((img) => img.closest('picture').replaceWith(createOptimizedPicture(img.src, img.alt, false, [{ width: '750' }])));
-  block.textContent = '';
-  block.append(ul);
-});
+    ul.querySelectorAll('picture > img').forEach((img) => img.closest('picture').replaceWith(createOptimizedPicture(img.src, img.alt, false, [{ width: '750' }])));
+    block.textContent = '';
+    block.append(ul);
+  });
 }
